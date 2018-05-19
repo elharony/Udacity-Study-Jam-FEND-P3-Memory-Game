@@ -2,7 +2,8 @@
 A one hour and half Livestream to help other students who are still working on The `Memory Game` Project.
 
 ## The live is available on YouTube
-If you missed the Livestream between `11:00 PM to 12:30 PM CEST` in our `#fend, that's fine. It is available on YouTube.
+Did you miss the Livestream between `11:00 PM to 12:30 PM CEST` in our `#fend-p3-memory-game` Slack Channel?
+That's fine. It is available on YouTube.
 [Watch it now](https://www.youtube.com/watch?v=G8J13lmApkQ)
 
 ## Main Objectives
@@ -18,7 +19,8 @@ The live will start from Downloading the project from the repo, till make it wor
 Almost. Except 2 things:
 - `timer`
 - `modal`
-But feel free to check my [Memory Game Repo](https://github.com/elharony/FEND-Memory-Game/) to know how I did them! 
+
+> Feel free to check my [Memory Game Repo](https://github.com/elharony/FEND-Memory-Game/) to know how I did them! 
 
 ## Feedback
 This was my first Livestream, or I should say; My first video ever. So, forgive me for its quality. I am open to hear any feedback, so that I can create a better content later.
