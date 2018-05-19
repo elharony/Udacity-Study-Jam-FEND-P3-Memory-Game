@@ -122,9 +122,9 @@ const star = `<li><i class="fa fa-star"></i></li>`;
 starsContainer.innerHTML = star + star + star;
 function rating() {
 
-    if( moves < 20) {
+    if( moves < 10) {
         starsContainer.innerHTML = star + star + star;
-    } else if( moves < 25) {
+    } else if( moves < 15) {
         starsContainer.innerHTML = star + star;
     } else {
         starsContainer.innerHTML = star;
