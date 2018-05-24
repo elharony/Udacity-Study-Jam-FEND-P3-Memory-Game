@@ -19,9 +19,10 @@ Idealy, this livestream is targeting the one who can't complete the `Memory Game
 The live will start from Downloading the project from the repo, till make it works!
 
 ## Does it cover everything?
-Almost. Except 2 things:
-- `timer`. I've done it separately in a `PDF`, read it [here](https://drive.google.com/open?id=1Q0MWC9WS1UsxX_xUfxXWHkgJQk_4zJJK).
+Almost. Except 3 things:
+- `timer`. I've done it separately in a `PDF`, read it [here](https://drive.google.com/file/d/1blJv3xK22ozh80RuUC2iA-9_SGQKsJ9E).
 - `modal`
+- `shuffle` the cards. It is self-assigned; All you need to do is to use the provided `shuffle` function, then loop through the `icons` after being shuffled!
 
 > Feel free to check my [Memory Game Repo](https://github.com/elharony/FEND-Memory-Game/) to know how I did them! 
 
