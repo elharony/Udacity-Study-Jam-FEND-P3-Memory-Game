@@ -17,7 +17,7 @@ The live will start from Downloading the project from the repo, till make it wor
 
 ## Does it cover everything?
 Almost. Except 2 things:
-- `timer`
+- `timer`. I've done it separately in a `PDF`, read it [here](https://drive.google.com/open?id=1Q0MWC9WS1UsxX_xUfxXWHkgJQk_4zJJK).
 - `modal`
 
 > Feel free to check my [Memory Game Repo](https://github.com/elharony/FEND-Memory-Game/) to know how I did them! 
