@@ -240,9 +240,18 @@ function reset() {
     // Reset `rating`
     starsContainer.innerHTML = star + star + star;
 
-    // Reset `timer`
+    /*
+     * Reset the `timer`
+     * 
+     * - Stop it first
+     * - Then, reset the `isFirstClick` to `true` to be able to start the timer again!
+     * - Don't forget about `totalSeconds`, it must be `0`
+     * - One more thing, is to update the HTML timer's container
+     */
+    stopTimer();
+    isFirstClick = true;
     totalSeconds = 0;
-    timerContainer.innerHTML = totalSeconds;
+    timerContainer.innerHTML = totalSeconds + "s";
 }
 
 
