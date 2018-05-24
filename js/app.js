@@ -27,10 +27,32 @@ function init() {
 /*
  * Click Event
  */
+
+// First Click Indicator
+let isFirstClick = true;
+
+// Click Function
 function click(card) {
 
     // Card Click Event
     card.addEventListener("click", function() {
+
+        /*
+        * At the first click, the condition will be true,
+        * and our code below will get executed!
+        * 
+        * We will call our `startTimer` function,
+        * Then, set the `isFirstClick` to `false`, so in the next click,
+        * it will be `if(false)` and nothing will happen, as we don't have an `else`!
+        * 
+        * THAT'S EXACTLY what we want!
+        */
+        if(isFirstClick) {
+            // Start our timer
+            startTimer();
+            // Change our First Click indicator's value
+            isFirstClick = false;
+        }
         
         const currentCard = this;
         const previousCard = openedCards[0];
@@ -95,7 +117,22 @@ function compare(currentCard, previousCard) {
  */
 function isOver() {
     if(matchedCards.length === icons.length) {
+
+        // Stop our timer
+        stopTimer();
+
+        /*
+         * Display your popup here, the `alert` is for explanation only!
+         * 
+         * In your popup, you should create a button, 
+         * To let the user play a new game
+         * 
+         * After clicking on that button, you should:
+         *  - Call the `init` function to re-create the cards
+         *  - Call the `reset` function to reset all variables
+         */
         alert("GAME OVER!");
+        
     }
 }
 
@@ -133,6 +170,46 @@ function rating() {
 
 
 /*
+ * Timer
+ */
+const timerContainer = document.querySelector(".timer");
+let liveTimer,
+    totalSeconds = 0;
+
+// Set the default value to the timer's container
+timerContainer.innerHTML = totalSeconds + 's';
+
+/*
+ * We call this function to start our function, 
+ * the totalSeconds will be increased 
+ * by 1 after 1000ms (1 second!)
+ * 
+ * HINT: We need to call this function ONCE, and the best time to call it
+ * is when the user click on a card (The first card!)
+ * This means that our user is start playing now! ;)
+ */
+ function startTimer() {
+    liveTimer = setInterval(function() {
+        // Increase the totalSeconds by 1
+        totalSeconds++;
+        // Update the HTML Container with the new time
+        timerContainer.innerHTML = totalSeconds + 's';
+    }, 1000);
+}
+
+/*
+ * Our timer won't stop. To stop it, we should clearInterval!
+ * We will call it when the game is over.
+ * So, we will call it at the end of `isOver` function
+ * 
+ * HINT: That's why I created the `liveTimer` variable, 
+ * to store the setInterval's function, so that we can stop it by its name!
+ */
+function stopTimer() {
+    clearInterval(liveTimer);
+}
+
+/*
  * Restart Button
  */
 const restartBtn = document.querySelector(".restart");
@@ -143,12 +220,30 @@ restartBtn.addEventListener("click", function() {
     // Call `init` to create new cards
     init();
 
-    // Reset ANY RELATED variables
+    // Reset the game
+    reset();
+
+});
+
+
+/*
+ * Reset All Game Variables
+ */
+function reset() {
+    // Empty the `matchedCards` array
     matchedCards = [];
+
+    // Reset `moves`
     moves = 0;
     movesContainer.innerHTML = moves;
+
+    // Reset `rating`
     starsContainer.innerHTML = star + star + star;
-});
+
+    // Reset `timer`
+    totalSeconds = 0;
+    timerContainer.innerHTML = totalSeconds;
+}
 
 
 /////// Start the game for the first time!
