@@ -1,10 +1,13 @@
 # Udacity - Study Jam | FEND - P3 Memory Game
 A one hour and half Livestream to help other students who are still working on The `Memory Game` Project.
 
-## The live is available on YouTube
+## The Livestream is available on YouTube
 Did you miss the Livestream between `11:00 PM to 12:30 PM CEST` in our `#fend-p3-memory-game` Slack Channel?
 That's fine. It is available on YouTube.
 [Watch it now](https://www.youtube.com/watch?v=G8J13lmApkQ)
+
+## Test the game
+Here is the [Live Preview](https://elharony.github.io/Udacity-Study-Jam-FEND-P3-Memory-Game/)
 
 ## Main Objectives
 - Explain the logic of each step
